@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K & S Optical | Premium Eyewear in Bahadurgarh, Haryana</title>
+    <meta name="description" content="K & S Optical in Bahadurgarh offers premium sunglasses, spectacle frames, and fashion eyewear. Owner: Krishan Saini, MIE-Part 2. Visit www.spikeopticals.in">
+    <meta name="keywords" content="K & S Optical, Bahadurgarh, sunglasses, spectacle frames, fashion eyewear, Krishan Saini, optical store, eyewear, glasses, spikeopticals">
+    <meta name="author" content="K & S Optical">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="K & S Optical | Premium Eyewear in Bahadurgarh">
+    <meta property="og:description" content="Premium sunglasses, spectacle frames, and fashion eyewear in Bahadurgarh. Owner: Krishan Saini, MIE-Part 2.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.spikeopticals.in">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="K & S Optical | Premium Eyewear in Bahadurgarh">
+    <meta name="twitter:description" content="Premium sunglasses, spectacle frames, and fashion eyewear in Bahadurgarh.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👓</text></svg>">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #1a2a6c, #2a3a7c, #3a4a8c);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+        }
+        
+        .owner-info {
+            text-align: right;
+            font-size: 0.9rem;
+        }
+        
+        .website-link {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 5px;
+            display: block;
+        }
+        
+        /* Navigation Styles */
+        nav {
+            background-color: #2a3a7c;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Hero Slider */
+        .slider {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slides {
+            display: flex;
+            width: 1000%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            width: 10%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .slide-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        
+        .slide-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        .slide-dot.active {
+            background-color: white;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2a3a7c;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #2a3a7c;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: #f5f5f5;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 10px;
+            color: #2a3a7c;
+        }
+        
+        .product-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Product Popup Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            animation: modalFade 0.3s;
+        }
+        
+        @keyframes modalFade {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .modal-header h2 {
+            color: #2a3a7c;
+            margin: 0;
+        }
+        
+        .close-modal {
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #777;
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+        .modal-body {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .modal-image {
+            flex: 1;
+            min-width: 300px;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+        
+        .modal-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .price-info {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .price-box {
+            flex: 1;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .single-price {
+            background-color: #e8f4ff;
+            border-left: 4px solid #2a3a7c;
+        }
+        
+        .bulk-price {
+            background-color: #fff0e8;
+            border-left: 4px solid #ff6b35;
+        }
+        
+        .price-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .price-amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .single-price .price-amount {
+            color: #2a3a7c;
+        }
+        
+        .bulk-price .price-amount {
+            color: #ff6b35;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .specs-table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .specs-table td:first-child {
+            font-weight: 600;
+            color: #555;
+            width: 40%;
+        }
+        
+        .varieties {
+            margin-top: 20px;
+        }
+        
+        .variety-options {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .variety-option {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .variety-option:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .variety-option.active {
+            background-color: #2a3a7c;
+            color: white;
+            border-color: #2a3a7c;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: #2a3a7c;
+            color: white;
+            flex: 2;
+        }
+        
+        .btn-secondary {
+            background-color: #f0f0f0;
+            color: #333;
+            flex: 1;
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+        }
+        
+        /* Flash Details Section */
+        .flash-details {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+        
+        .flash-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .flash-item {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border-left: 4px solid #2a3a7c;
+        }
+        
+        .flash-item h4 {
+            color: #2a3a7c;
+            margin-bottom: 8px;
+        }
+        
+        /* About Section */
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            background-image: url('https://images.unsplash.com/photo-1574258495973-f010dfbb5371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Social Media Section */
+        .social-media {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #2a3a7c;
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+        
+        .facebook:hover {
+            background-color: #3b5998;
+        }
+        
+        .instagram:hover {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+        
+        .twitter:hover {
+            background-color: #1da1f2;
+        }
+        
+        .youtube:hover {
+            background-color: #ff0000;
+        }
+        
+        .whatsapp:hover {
+            background-color: #25d366;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(to right, #1a2a6c, #2a3a7c);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: white;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .contact-form button {
+            background-color: white;
+            color: #2a3a7c;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .owner-info {
+                margin-top: 10px;
+                text-align: center;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+            }
+            
+            .nav-links li {
+                margin: 5px;
+            }
+            
+            .slider {
+                height: 250px;
+            }
+            
+            .social-icons {
+                flex-wrap: wrap;
+            }
+            
+            .modal-body {
+                flex-direction: column;
+            }
+            
+            .modal-image {
+                min-width: 100%;
+            }
+            
+            .price-info {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">👓</span>
+                    <h1>K & S Optical</h1>
+                </div>
+                <div class="owner-info">
+                    <p>Owner: Krishan Saini, MIE-Part 2</p>
+                    <p>Bahadurgarh, Haryana - 124507</p>
+                    <a href="https://www.spikeopticals.in" class="website-link">www.spikeopticals.in</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sunglasses">Sunglasses</a></li>
+                <li><a href="#spectacles">Spectacle Frames</a></li>
+                <li><a href="#fashion">Fashion Wear</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Image Slider -->
+    <div class="container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1574258495973-f010dfbb5371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1508296695146-257a814070b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1601924582970-9238bcb495d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1622434641406-a158123450f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1594576722512-582d5577dc55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1591073113125-e46713c829ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80')"></div>
+            </div>
+            <div class="slide-controls">
+                <span class="slide-dot active" data-slide="0"></span>
+                <span class="slide-dot" data-slide="1"></span>
+                <span class="slide-dot" data-slide="2"></span>
+                <span class="slide-dot" data-slide="3"></span>
+                <span class="slide-dot" data-slide="4"></span>
+                <span class="slide-dot" data-slide="5"></span>
+                <span class="slide-dot" data-slide="6"></span>
+                <span class="slide-dot" data-slide="7"></span>
+                <span class="slide-dot" data-slide="8"></span>
+                <span class="slide-dot" data-slide="9"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Flash Details Section -->
+        <section class="flash-details">
+            <h2 class="section-title">Flash Details & Special Offers</h2>
+            <div class="flash-grid">
+                <div class="flash-item">
+                    <h4>Summer Sunglasses Sale</h4>
+                    <p>Up to 40% off on premium branded sunglasses. Limited time offer!</p>
+                </div>
+                <div class="flash-item">
+                    <h4>Buy 1 Get 1 Free</h4>
+                    <p>On selected spectacle frames. Hurry while stocks last!</p>
+                </div>
+                <div class="flash-item">
+                    <h4>Free Eye Checkup</h4>
+                    <p>Complimentary eye examination with any purchase above ₹2000.</p>
+                </div>
+                <div class="flash-item">
+                    <h4>New Arrivals</h4>
+                    <p>Latest designer frames from Ray-Ban, Oakley, and more!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="social-media">
+            <h2 class="section-title">Follow Us On Social Media</h2>
+            <div class="social-icons">
+                <a href="#" class="social-icon facebook" aria-label="Facebook">
+                    <span>f</span>
+                </a>
+                <a href="#" class="social-icon instagram" aria-label="Instagram">
+                    <span>ig</span>
+                </a>
+                <a href="#" class="social-icon twitter" aria-label="Twitter">
+                    <span>t</span>
+                </a>
+                <a href="#" class="social-icon youtube" aria-label="YouTube">
+                    <span>yt</span>
+                </a>
+                <a href="#" class="social-icon whatsapp" aria-label="WhatsApp">
+                    <span>wa</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sunglasses Section -->
+        <section id="sunglasses">
+            <h2 class="section-title">Premium Sunglasses Collection</h2>
+            <div class="products">
+                <div class="product-card" data-product="aviator">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Aviator Sunglasses</h3>
+                        <p>Classic aviator style with UV400 protection and polarized lenses.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-product="wayfarer">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Wayfarer Sunglasses</h3>
+                        <p>Timeless wayfarer design with 100% UV protection and durable frames.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-product="sports">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Sports Sunglasses</h3>
+                        <p>Lightweight, impact-resistant sunglasses perfect for outdoor activities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spectacle Frames Section -->
+        <section id="spectacles">
+            <h2 class="section-title">Spectacle Frames Collection</h2>
+            <div class="products">
+                <div class="product-card" data-product="full-rim">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Full Rim Frames</h3>
+                        <p>Durable full-rim frames available in various materials and colors.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-product="rimless">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1591073113125-e46713c829ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Rimless Frames</h3>
+                        <p>Lightweight rimless frames for a minimalist and sophisticated look.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-product="half-rim">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Half Rim Frames</h3>
+                        <p>Stylish half-rim frames combining durability with elegant design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fashion Wear Section -->
+        <section id="fashion">
+            <h2 class="section-title">Fashion Optical Wear</h2>
+            <div class="products">
+                <div class="product-card" data-product="designer">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1574258495973-f010dfbb5371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Designer Frames</h3>
+                        <p>Exclusive designer frames from top international brands.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-product="cat-eye">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1508296695146-257a814070b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Cat-Eye Frames</h3>
+                        <p>Vintage-inspired cat-eye frames for a classic feminine look.</p>
+                    </div>
+                </div>
+                <div class="product-card" data-product="oversized">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Oversized Frames</h3>
+                        <p>Bold oversized frames making a strong fashion statement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-text">
+                <h2 class="section-title">About K & S Optical</h2>
+                <p>Welcome to K & S Optical, your premier destination for quality eyewear in Bahadurgarh, Haryana. Established and managed by Krishan Saini, MIE-Part 2, we have been serving the community with exceptional optical products and services for years.</p>
+                <p>Our extensive collection includes premium sunglasses, spectacle frames, and fashion optical wear from renowned brands. We pride ourselves on offering personalized service, expert advice, and the latest trends in eyewear fashion.</p>
+                <p>At K & S Optical, we understand that your vision is precious, which is why we combine style with functionality to provide you with eyewear that not only looks great but also protects and enhances your vision.</p>
+                <p>Visit our website: <a href="https://www.spikeopticals.in" style="color: #2a3a7c; font-weight: bold;">www.spikeopticals.in</a></p>
+            </div>
+            <div class="about-image"></div>
+        </section>
+    </div>
+
+    <!-- Product Modal Popup -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalProductTitle">Product Name</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image" id="modalProductImage"></div>
+                <div class="modal-details">
+                    <p id="modalProductDescription">Product description goes here.</p>
+                    
+                    <div class="price-info">
+                        <div class="price-box single-price">
+                            <div class="price-label">Cost Per Piece</div>
+                            <div class="price-amount" id="singlePrice">₹850</div>
+                        </div>
+                        <div class="price-box bulk-price">
+                            <div class="price-label">Bulk Rate (10+ pieces)</div>
+                            <div class="price-amount" id="bulkPrice">₹720</div>
+                        </div>
+                    </div>
+                    
+                    <table class="specs-table">
+                        <tr>
+                            <td>Material</td>
+                            <td id="materialInfo">Acetate Frame, Polycarbonate Lenses</td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td id="sizeInfo">140mm x 50mm x 20mm</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td id="weightInfo">28 grams</td>
+                        </tr>
+                        <tr>
+                            <td>Lens Type</td>
+                            <td id="lensInfo">Polarized, UV400 Protection</td>
+                        </tr>
+                        <tr>
+                            <td>Frame Color</td>
+                            <td id="colorInfo">Black, Brown, Tortoise</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="varieties">
+                        <h3>Available Varieties</h3>
+                        <div class="variety-options" id="varietyOptions">
+                            <!-- Options will be added dynamically -->
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary">Inquire Now</button>
+                        <button class="btn btn-secondary">Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Location Section -->
+                <div class="footer-section">
+                    <h3>Our Location</h3>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27999.119560627!2d76.916667!3d28.683333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07be81c2b58d%3A0x8e6e3e7b8e3e3e3e!2sBahadurgarh%2C%20Haryana%20124507!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <p>Find us in the heart of Bahadurgarh, easily accessible from all parts of the city.</p>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="footer-section contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i>📍</i> K & S Optical, Main Market, Bahadurgarh - 124507, Haryana</p>
+                    <p><i>📞</i> +91 98765 43210</p>
+                    <p><i>📧</i> info@spikeopticals.in</p>
+                    <p><i>🕒</i> Open: Mon-Sat 10:00 AM - 8:00 PM</p>
+                    <p><i>👓</i> Owner: Krishan Saini, MIE-Part 2</p>
+                    <p><i>🌐</i> Website: www.spikeopticals.in</p>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone">
+                        <textarea placeholder="Your Message" rows="4" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 K & S Optical, Bahadurgarh. All Rights Reserved. | Website: www.spikeopticals.in</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product data
+        const products = {
+            'aviator': {
+                title: 'Aviator Sunglasses',
+                description: 'Classic aviator style sunglasses with UV400 protection and polarized lenses. Perfect for driving and outdoor activities.',
+                image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                singlePrice: '₹1,200',
+                bulkPrice: '₹950',
+                material: 'Metal Frame, Polarized Glass Lenses',
+                size: '140mm x 50mm x 20mm',
+                weight: '25 grams',
+                lens: 'Polarized, UV400 Protection',
+                color: 'Gold, Silver, Black, Gunmetal',
+                varieties: ['Gold Frame', 'Silver Frame', 'Black Frame', 'Gunmetal Frame']
+            },
+            'wayfarer': {
+                title: 'Wayfarer Sunglasses',
+                description: 'Timeless wayfarer design with 100% UV protection and durable frames. A fashion staple for any wardrobe.',
+                image: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                singlePrice: '₹1,500',
+                bulkPrice: '₹1,200',
+                material: 'Acetate Frame, Polycarbonate Lenses',
+                size: '145mm x 52mm x 22mm',
+                weight: '28 grams',
+                lens: 'UV Protection, Scratch Resistant',
+                color: 'Black, Tortoise, Brown, Navy Blue',
+                varieties: ['Classic Black', 'Tortoise Shell', 'Brown Tortoise', 'Navy Blue']
+            },
+            'sports': {
+                title: 'Sports Sunglasses',
+                description: 'Lightweight, impact-resistant sunglasses perfect for outdoor activities and sports. Wraparound design for maximum coverage.',
+                image: 'https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                singlePrice: '₹2,000',
+                bulkPrice: '₹1,600',
+                material: 'TR90 Frame, Polycarbonate Lenses',
+                size: '150mm x 55mm x 25mm',
+                weight: '22 grams',
+                lens: 'Polarized, Impact Resistant, UV400',
+                color: 'Black, Blue, Red, Green',
+                varieties: ['Matte Black', 'Electric Blue', 'Racing Red', 'Forest Green']
+            },
+            'full-rim': {
+                title: 'Full Rim Frames',
+                description: 'Durable full-rim frames available in various materials and colors. Perfect for everyday use with all lens types.',
+                image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                singlePrice: '₹850',
+                bulkPrice: '₹680',
+                material: 'Acetate/Metal Frame',
+                size: '135mm x 48mm x 18mm',
+                weight: '18 grams',
+                lens: 'Compatible with all lens types',
+                color: 'Black, Brown, Grey, Tortoise, Blue',
+                varieties: ['Classic Black', 'Professional Brown', 'Modern Grey', 'Vintage Tortoise']
+            },
+            'rimless': {
+                title: 'Rimless Frames',
+                description: 'Lightweight rimless frames for a minimalist and sophisticated look. Virtually invisible on the face.',
+                image: 'https://images.unsplash.com/photo-1591073113125-e46713c829ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                singlePrice: '₹1,800',
+                bulkPrice: '₹1,450',
+                material: 'Titanium Frame',
+                size: '138mm x 46mm x 16mm',
+                weight: '12 grams',
+                lens: 'Best with high-index lenses',
+                color: 'Silver, Gold, Gunmetal, Rose Gold',
+                varieties: ['Titanium Silver', 'Elegant Gold', 'Modern Gunmetal', 'Rose Gold']
+            },
+            'half-rim': {
+                title: 'Half Rim Frames',
+                description: 'Stylish half-rim frames combining durability with elegant design. Nylon string construction for secure lens holding.',
+                image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                singlePrice: '₹1,200',
+                bulkPrice: '₹950',
+                material: 'Metal Frame with Nylon String',
+                size: '140mm x 48mm x 19mm',
+                weight: '16 grams',
+                lens: 'Works well with most lens materials',
+                color: 'Black, Brown, Silver, Two-Tone',
+                varieties: ['Sleek Black', 'Warm Brown', 'Polished Silver', 'Two-Tone']
+            },
+            'designer': {
+                title: 'Designer Frames',
+                description: 'Exclusive designer frames from top international brands. Luxury eyewear for the fashion-conscious individual.',
+                image: 'https://images.unsplash.com/photo-1574258495973-f010dfbb5371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                singlePrice: '₹3,500',
+                bulkPrice: '₹2,800',
+                material: 'Premium Acetate, Italian Design',
+                size: '142mm x 50mm x 21mm',
+                weight: '24 grams',
+                lens: 'Compatible with premium lens options',
+                color: 'Various designer colors and patterns',
+                varieties: ['Classic Collection', 'Modern Collection', 'Limited Edition', 'Signature Series']
+            },
+            'cat-eye': {
+                title: 'Cat-Eye Frames',
+                description: 'Vintage-inspired cat-eye frames for a classic feminine look. Retro style with modern comfort and durability.',
+                image: 'https://images.unsplash.com/photo-1508296695146-257a814070b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                singlePrice: '₹1,600',
+                bulkPrice: '₹1,280',
+                material: 'Acetate Frame with Metal Accents',
+                size: '135mm x 46mm x 20mm',
+                weight: '20 grams',
+                lens: 'Perfect for progressive and bifocal lenses',
+                color: 'Tortoise, Black, Red, Purple, Pink',
+                varieties: ['Vintage Tortoise', 'Classic Black', 'Bold Red', 'Lavender Dream', 'Blush Pink']
+            },
+            'oversized': {
+                title: 'Oversized Frames',
+                description: 'Bold oversized frames making a strong fashion statement. Maximum coverage with a dramatic flair.',
+                image: 'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                singlePrice: '₹1,400',
+                bulkPrice: '₹1,120',
+                material: 'Acetate Frame',
+                size: '155mm x 58mm x 25mm',
+                weight: '30 grams',
+                lens: 'Large area for vision correction',
+                color: 'Clear, Black, Tortoise, Pastel Colors',
+                varieties: ['Crystal Clear', 'Jet Black', 'Classic Tortoise', 'Pastel Blue', 'Soft Pink']
+            }
+        };
+
+        // Image Slider Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelector('.slides');
+            const dots = document.querySelectorAll('.slide-dot');
+            let currentSlide = 0;
+            const slideCount = dots.length;
+            
+            // Initialize slider
+            function showSlide(n) {
+                slides.style.transform = `translateX(-${n * 10}%)`;
+                
+                // Update active dot
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[n].classList.add('active');
+                
+                currentSlide = n;
+            }
+            
+            // Add click events to dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+            
+            // Auto slide change
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slideCount;
+                showSlide(currentSlide);
+            }, 4000);
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Product Modal Functionality
+            const modal = document.getElementById('productModal');
+            const closeModal = document.querySelector('.close-modal');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            // Open modal when product card is clicked
+            productCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-product');
+                    openProductModal(productId);
+                });
+            });
+            
+            // Close modal when X is clicked
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            // Close modal when clicking outside the content
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Function to open product modal with data
+            function openProductModal(productId) {
+                const product = products[productId];
+                if (!product) return;
+                
+                // Set modal content
+                document.getElementById('modalProductTitle').textContent = product.title;
+                document.getElementById('modalProductDescription').textContent = product.description;
+                document.getElementById('modalProductImage').style.backgroundImage = `url('${product.image}')`;
+                document.getElementById('singlePrice').textContent = product.singlePrice;
+                document.getElementById('bulkPrice').textContent = product.bulkPrice;
+                document.getElementById('materialInfo').textContent = product.material;
+                document.getElementById('sizeInfo').textContent = product.size;
+                document.getElementById('weightInfo').textContent = product.weight;
+                document.getElementById('lensInfo').textContent = product.lens;
+                document.getElementById('colorInfo').textContent = product.color;
+                
+                // Add variety options
+                const varietyOptions = document.getElementById('varietyOptions');
+                varietyOptions.innerHTML = '';
+                
+                product.varieties.forEach(variety => {
+                    const option = document.createElement('div');
+                    option.className = 'variety-option';
+                    option.textContent = variety;
+                    option.addEventListener('click', function() {
+                        // Remove active class from all options
+                        document.querySelectorAll('.variety-option').forEach(opt => {
+                            opt.classList.remove('active');
+                        });
+                        // Add active class to clicked option
+                        this.classList.add('active');
+                    });
+                    varietyOptions.appendChild(option);
+                });
+                
+                // Activate first variety by default
+                if (varietyOptions.firstChild) {
+                    varietyOptions.firstChild.classList.add('active');
+                }
+                
+                // Show the modal
+                modal.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
