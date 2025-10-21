@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K & S Optical | Premium Eyewear in Bahadurgarh</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #1a2a6c, #2a3a7c, #3a4a8c);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+        }
+        
+        .owner-info {
+            text-align: right;
+            font-size: 0.9rem;
+        }
+        
+        /* Navigation Styles */
+        nav {
+            background-color: #2a3a7c;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Hero Slider */
+        .slider {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slides {
+            display: flex;
+            width: 1000%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            width: 10%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .slide-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        
+        .slide-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        .slide-dot.active {
+            background-color: white;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2a3a7c;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #2a3a7c;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: #f5f5f5;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 10px;
+            color: #2a3a7c;
+        }
+        
+        .product-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Flash Details Section */
+        .flash-details {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+        
+        .flash-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .flash-item {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border-left: 4px solid #2a3a7c;
+        }
+        
+        .flash-item h4 {
+            color: #2a3a7c;
+            margin-bottom: 8px;
+        }
+        
+        /* About Section */
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            background-image: url('https://via.placeholder.com/500x300');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(to right, #1a2a6c, #2a3a7c);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: white;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .contact-form button {
+            background-color: white;
+            color: #2a3a7c;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .owner-info {
+                margin-top: 10px;
+                text-align: center;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+            }
+            
+            .nav-links li {
+                margin: 5px;
+            }
+            
+            .slider {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">👓</span>
+                    <h1>K & S Optical</h1>
+                </div>
+                <div class="owner-info">
+                    <p>Owner: Krishan Saini, MIE-Part 2</p>
+                    <p>Bahadurgarh, Haryana</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sunglasses">Sunglasses</a></li>
+                <li><a href="#spectacles">Spectacle Frames</a></li>
+                <li><a href="#fashion">Fashion Wear</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Image Slider -->
+    <div class="container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/2a3a7c/ffffff?text=Premium+Sunglasses+Collection');"></div>
+                <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/1a2a6c/ffffff?text=Stylish+Spectacle+Frames');"></div>
+                <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/3a4a8c/ffffff?text=Fashion+Optical+Wear');"></div>
+                <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/4a5a9c/ffffff?text=Latest+Designer+Eyewear');"></div>
+                <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/5a6aac/ffffff?text=Prescription+Glasses');"></div>
+                <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/6a7abc/ffffff?text=UV+Protection+Sunglasses');"></div>
+                <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/7a8acc/ffffff?text=Kids+Optical+Frames');"></div>
+                <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/8a9adc/ffffff?text=Professional+Eye+Checkup');"></div>
+                <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/9aaafc/ffffff?text=Premium+Brands+Available');"></div>
+                <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/aabafc/ffffff?text=Expert+Optical+Services');"></div>
+            </div>
+            <div class="slide-controls">
+                <span class="slide-dot active" data-slide="0"></span>
+                <span class="slide-dot" data-slide="1"></span>
+                <span class="slide-dot" data-slide="2"></span>
+                <span class="slide-dot" data-slide="3"></span>
+                <span class="slide-dot" data-slide="4"></span>
+                <span class="slide-dot" data-slide="5"></span>
+                <span class="slide-dot" data-slide="6"></span>
+                <span class="slide-dot" data-slide="7"></span>
+                <span class="slide-dot" data-slide="8"></span>
+                <span class="slide-dot" data-slide="9"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Flash Details Section -->
+        <section class="flash-details">
+            <h2 class="section-title">Flash Details & Special Offers</h2>
+            <div class="flash-grid">
+                <div class="flash-item">
+                    <h4>Summer Sunglasses Sale</h4>
+                    <p>Up to 40% off on premium branded sunglasses. Limited time offer!</p>
+                </div>
+                <div class="flash-item">
+                    <h4>Buy 1 Get 1 Free</h4>
+                    <p>On selected spectacle frames. Hurry while stocks last!</p>
+                </div>
+                <div class="flash-item">
+                    <h4>Free Eye Checkup</h4>
+                    <p>Complimentary eye examination with any purchase above ₹2000.</p>
+                </div>
+                <div class="flash-item">
+                    <h4>New Arrivals</h4>
+                    <p>Latest designer frames from Ray-Ban, Oakley, and more!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sunglasses Section -->
+        <section id="sunglasses">
+            <h2 class="section-title">Premium Sunglasses Collection</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200/2a3a7c/ffffff?text=Aviator+Sunglasses');"></div>
+                    <div class="product-info">
+                        <h3>Aviator Sunglasses</h3>
+                        <p>Classic aviator style with UV400 protection and polarized lenses.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200/1a2a6c/ffffff?text=Wayfarer+Sunglasses');"></div>
+                    <div class="product-info">
+                        <h3>Wayfarer Sunglasses</h3>
+                        <p>Timeless wayfarer design with 100% UV protection and durable frames.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200/3a4a8c/ffffff?text=Sports+Sunglasses');"></div>
+                    <div class="product-info">
+                        <h3>Sports Sunglasses</h3>
+                        <p>Lightweight, impact-resistant sunglasses perfect for outdoor activities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spectacle Frames Section -->
+        <section id="spectacles">
+            <h2 class="section-title">Spectacle Frames Collection</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200/4a5a9c/ffffff?text=Full+Rim+Frames');"></div>
+                    <div class="product-info">
+                        <h3>Full Rim Frames</h3>
+                        <p>Durable full-rim frames available in various materials and colors.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200/5a6aac/ffffff?text=Rimless+Frames');"></div>
+                    <div class="product-info">
+                        <h3>Rimless Frames</h3>
+                        <p>Lightweight rimless frames for a minimalist and sophisticated look.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200/6a7abc/ffffff?text=Half+Rim+Frames');"></div>
+                    <div class="product-info">
+                        <h3>Half Rim Frames</h3>
+                        <p>Stylish half-rim frames combining durability with elegant design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fashion Wear Section -->
+        <section id="fashion">
+            <h2 class="section-title">Fashion Optical Wear</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200/7a8acc/ffffff?text=Designer+Frames');"></div>
+                    <div class="product-info">
+                        <h3>Designer Frames</h3>
+                        <p>Exclusive designer frames from top international brands.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200/8a9adc/ffffff?text=Cat-Eye+Frames');"></div>
+                    <div class="product-info">
+                        <h3>Cat-Eye Frames</h3>
+                        <p>Vintage-inspired cat-eye frames for a classic feminine look.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200/9aaafc/ffffff?text=Oversized+Frames');"></div>
+                    <div class="product-info">
+                        <h3>Oversized Frames</h3>
+                        <p>Bold oversized frames making a strong fashion statement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-text">
+                <h2 class="section-title">About K & S Optical</h2>
+                <p>Welcome to K & S Optical, your premier destination for quality eyewear in Bahadurgarh, Haryana. Established and managed by Krishan Saini, MIE-Part 2, we have been serving the community with exceptional optical products and services for years.</p>
+                <p>Our extensive collection includes premium sunglasses, spectacle frames, and fashion optical wear from renowned brands. We pride ourselves on offering personalized service, expert advice, and the latest trends in eyewear fashion.</p>
+                <p>At K & S Optical, we understand that your vision is precious, which is why we combine style with functionality to provide you with eyewear that not only looks great but also protects and enhances your vision.</p>
+            </div>
+            <div class="about-image"></div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Location Section -->
+                <div class="footer-section">
+                    <h3>Our Location</h3>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27999.119560627!2d76.916667!3d28.683333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07be81c2b58d%3A0x8e6e3e7b8e3e3e3e!2sBahadurgarh%2C%20Haryana%20124507!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <p>Find us in the heart of Bahadurgarh, easily accessible from all parts of the city.</p>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="footer-section contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i>📍</i> K & S Optical, Main Market, Bahadurgarh - 124507, Haryana</p>
+                    <p><i>📞</i> +91 98765 43210</p>
+                    <p><i>📧</i> info@ksopticalbahadurgarh.com</p>
+                    <p><i>🕒</i> Open: Mon-Sat 10:00 AM - 8:00 PM</p>
+                    <p><i>👓</i> Owner: Krishan Saini, MIE-Part 2</p>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone">
+                        <textarea placeholder="Your Message" rows="4" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 K & S Optical, Bahadurgarh. All Rights Reserved.</p>
+           
